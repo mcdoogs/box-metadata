@@ -1,0 +1,2 @@
+boxsdk[jwt]>=2.11.0
+python-dotenv==0.15.0
