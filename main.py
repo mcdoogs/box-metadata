@@ -61,8 +61,10 @@ for row in csv_reader:
                 # retrieve all metadata for this file and iterate through each one
                 file_metadata = my_file.get_all_metadata()
                 for instance in file_metadata:
+                    print(f'Found metadata:')
+                    print(instance)
                     if METADATA_NAME in instance: # if the key for this piece of metadata matches what we want...
-                        print(f'Metadata {METADATA_NAME} for file ID {file_id} has value "{instance[METADATA_NAME]}"')
+                        print(f'Filling in {METADATA_NAME} column for file ID {file_id} with value "{instance[METADATA_NAME]}"')
                         # update our row with the value of this metadata
                         row[metadata_index] = instance[METADATA_NAME]
             except:
